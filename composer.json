@@ -1,0 +1,16 @@
+{
+  "name": "wgjr/hateoas-laravel",
+  "description": "Laravel response hateoas",
+  "minimum-stability": "dev",
+  "type": "library",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Wilton Gomes",
+      "email": "mysolucoes+11@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  }
+}
