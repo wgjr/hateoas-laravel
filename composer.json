@@ -18,7 +18,7 @@
       "hateoasLaravel\\": "src/hateoas-laravel/"
     },
     "files": [
-      "src/hateoas-laravel/HateoasLaravel.php"
+      "src/hateoas-laravel/Domain/UseCases/HateoasLaravel.php"
     ]
   },
   "extra": {

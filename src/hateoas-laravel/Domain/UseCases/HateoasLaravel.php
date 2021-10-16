@@ -51,19 +51,25 @@ class HateoasLaravel
                                    ?int   $code,
                                    ?array $dataResponse): LaravelJsonResponse
     {
-        return new LaravelJsonResponse(
-            new JsonResponse(
+        try {
+            $validate = new JsonResponse(
                 $this->formatToHateoas(
                     $classInResponse,
                     $hashMessage,
                     $code,
                     $dataResponse
                 )
-            ),
-            (!is_null($code)) ? $code : 200,
-            [
-                'Content-Type', 'application/json'
-            ]
-        );
+            );
+
+            return new LaravelJsonResponse(
+                $validate->getArray(),
+                (!is_null($code)) ? $code : 200,
+                [
+                    'Content-Type', 'application/json'
+                ]
+            );
+        } catch (Exception $exceptionFormater) {
+            return $exceptionFormater->getMessage();
+        }
     }
 }
