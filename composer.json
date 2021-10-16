@@ -1,16 +1,36 @@
 {
   "name": "wgjr/hateoas-laravel",
   "description": "Laravel response hateoas",
-  "minimum-stability": "dev",
   "type": "library",
+  "require": {
+    "php": ">=7.4",
+    "illuminate/support": "5.6.* || 5.7.* || 5.8.* || 6.0.*",
+    "ext-json": "*"
+  },
   "license": "proprietary",
   "authors": [
     {
-      "name": "Wilton Gomes",
-      "email": "mysolucoes+11@gmail.com"
+      "name": "Wilton Gomes - Afilio",
+      "email": "wilton.gomes@afil.io"
     }
   ],
-  "require": {
-    "php": ">=7.4"
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "hateoasLaravel\\": "src/hateoas-laravel/"
+    },
+    "files": [
+      "src/hateoas-laravel/HateoasLaravel.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "hateoasLaravel\\HateoasLaravelServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.8"
   }
 }
