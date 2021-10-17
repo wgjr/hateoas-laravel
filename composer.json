@@ -30,7 +30,7 @@
   },
   "require-dev": {
     "orchestra/testbench": "^3.8",
-    "ext-json": "*",
-    "laravelcollective/html": "^5.5"
+    "laravelcollective/html": "^5.5",
+    "ext-json": "*"
   }
 }

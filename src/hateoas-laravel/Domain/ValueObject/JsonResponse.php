@@ -1,6 +1,6 @@
 <?php
 
-namespace hateoasLaravel\Domain\UseCases\Domain\ValueObject;
+namespace hateoasLaravel\Domain\ValueObject;
 
 use Exception;
 use RuntimeException;
