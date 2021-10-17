@@ -46,7 +46,6 @@ class HateoasLaravel
      * @param int|null $code
      * @param array|null $dataResponse
      * @return LaravelJsonResponse
-     * @throws Exception
      */
     public function formatResponse(string $classInResponse,
                                    string $hashMessage,
