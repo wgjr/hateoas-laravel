@@ -1,8 +1,9 @@
 <?php
 
-namespace hateoasLaravel;
+namespace hateoasLaravel\Domain\UseCases;
 
-use hateoasLaravel\Domain\ValueObject\JsonResponse;
+use Exception;
+use hateoasLaravel\Domain\UseCases\Domain\ValueObject\JsonResponse;
 use \Illuminate\Http\JsonResponse as LaravelJsonResponse;
 
 class HateoasLaravel
@@ -45,6 +46,7 @@ class HateoasLaravel
      * @param int|null $code
      * @param array|null $dataResponse
      * @return LaravelJsonResponse
+     * @throws Exception
      */
     public function formatResponse(string $classInResponse,
                                    string $hashMessage,
@@ -68,8 +70,10 @@ class HateoasLaravel
                     'Content-Type', 'application/json'
                 ]
             );
-        } catch (Exception $exceptionFormater) {
-            return $exceptionFormater->getMessage();
+        } catch (Exception $exceptionFormatter) {
+            throw new Exception(
+                $exceptionFormatter->getMessage()
+            );
         }
     }
 }
