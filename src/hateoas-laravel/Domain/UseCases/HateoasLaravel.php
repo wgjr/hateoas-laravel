@@ -3,7 +3,7 @@
 namespace hateoasLaravel\Domain\UseCases;
 
 use Exception;
-use hateoasLaravel\Domain\UseCases\Domain\ValueObject\JsonResponse;
+use hateoasLaravel\Domain\ValueObject\JsonResponse;
 use \Illuminate\Http\JsonResponse as LaravelJsonResponse;
 
 class HateoasLaravel
