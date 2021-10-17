@@ -71,8 +71,12 @@ class HateoasLaravel
                 ]
             );
         } catch (Exception $exceptionFormatter) {
-            throw new Exception(
-                $exceptionFormatter->getMessage()
+            return new LaravelJsonResponse(
+                $dataResponse,
+                (!is_null($code)) ? $code : 200,
+                [
+                    'Content-Type', 'application/json'
+                ]
             );
         }
     }
