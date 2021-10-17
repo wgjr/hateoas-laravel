@@ -49,8 +49,8 @@ class HateoasLaravel
      */
     public function formatResponse(string $classInResponse,
                                    string $hashMessage,
-                                   ?int   $code,
-                                   ?array $dataResponse): LaravelJsonResponse
+                                   ?int   $code = null,
+                                   ?array $dataResponse = null): LaravelJsonResponse
     {
         try {
             $validate = new JsonResponse(
