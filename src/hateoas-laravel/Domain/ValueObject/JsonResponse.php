@@ -7,7 +7,7 @@ use RuntimeException;
 
 class JsonResponse
 {
-    private array $response;
+    private $response;
 
     public function __construct(array $responseObject)
     {
