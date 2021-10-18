@@ -3,7 +3,6 @@
   "description": "Laravel response hateoas",
   "type": "library",
   "require": {
-    "php": ">=7.4"
   },
   "license": "proprietary",
   "authors": [
@@ -31,6 +30,7 @@
   "require-dev": {
     "orchestra/testbench": "^3.8",
     "laravelcollective/html": "^5.5",
-    "ext-json": "*"
+    "ext-json": "*",
+    "php": ">=7.4"
   }
 }
